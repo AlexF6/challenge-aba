@@ -1,6 +1,7 @@
 //src/App.jsx
 import React from 'react';
 import "./styles/index.css"
+import "./styles/App.css"
 import Sidebar from "./components/Sidebar.jsx"
 
 function App() {

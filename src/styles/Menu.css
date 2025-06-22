@@ -1,0 +1,31 @@
+.menu {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+    margin-top: 1.5rem;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 2rem;
+}
+
+.menu-item{
+    display: flex;
+    align-items: center;
+    gap: 0.1rem;
+}
+
+.menu a{
+    display: inline-block;
+    align-items: center;
+    font-size: 1.1rem;
+    font-weight: 350;
+    color: inherit;
+    text-decoration: none;
+    /* border: 1px solid red; */
+}
+
+.menu-icon {
+    max-width: 100%;
+    /* border: 1px solid red; */
+    height: auto;
+    width: 2rem;
+}
