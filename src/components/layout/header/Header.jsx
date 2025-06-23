@@ -13,7 +13,6 @@ const Header = () => {
                 <SearchBar/>
                 <HeaderIcon/>
             </div>
-
         </header>
     );
 };

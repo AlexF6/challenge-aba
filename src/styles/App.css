@@ -1,11 +1,36 @@
 .app-container {
     display: flex;
-    height: 100vh;
-    font-family: "Roboto", sans-serif;
+    height: 100%;
+    /* border: 1px solid red; */
 }
 
-.main-content {
+.header-content {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.main-section {
     display: flex;
     flex: 1;
-    flex-direction: column;
+    height: 100%;
+    /* border: 1px solid red; */
+}
+
+.note-section {
+    flex: 2;
+    height: auto;
+    /* border: 1px solid blue; */
+}
+
+.note-details {
+    flex: 6;
+    height: 100%;
+    /* border: 1px solid green; */
+}
+
+.note-actions {
+    flex: 2;
+    height: 100%;
+    /* border: 1px solid red; */
 }
