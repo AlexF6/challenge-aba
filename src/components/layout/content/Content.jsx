@@ -17,7 +17,7 @@ function Formulario(){
       <input type="text" placeholder="Tittle" />
 
       <label>Contenido</label>
-      <textarea placeholder="content..."></textarea>
+      <textarea placeholder="Start typing..."></textarea>
 
       <button type="submit">Guardar</button>
     </form>
