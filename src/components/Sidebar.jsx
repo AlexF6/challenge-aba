@@ -1,42 +1,32 @@
-//src/components/Sidebar.jsx
-
 import React from "react";
 import "../styles/Sidebar.css";
+import HouseImage from "../assets/house.svg";
+import ArchiveImage from "../assets/archive.svg";
 import TagItem from "./TagItem";
 import LogoSidebar from "./LogoSidebar";
 import Menu from "./Menu";
 
-export function Sidebar() {
+const Sidebar = () => {
+  const tags = [
+    "Cooking", "Dev", "Fitness", "Health", "Personal",
+    "React", "Recipes", "Shopping", "Travel", "TypeScript"
+  ];
 
-    const tags = [
-        "Cooking",
-        "Dev",
-        "Fitness",
-        "Health",
-        "Personal",
-        "React",
-        "Recipes",
-        "Shopping",
-        "Travel",
-        "TypeScript",
-    ];
-
-    return(
-        <aside className="sidebar">
-            <LogoSidebar name="Notes"/>
-            <nav className="menu">
-                <Menu name = "All Notes"/>
-                <Menu name = "Archived Notes"/>
-            </nav>    
-
-            <div className="tags">
-                <h3>Tags</h3>
-                <ul>
-                    {tags.map(tag => <TagItem name={tag} />)}
-                </ul>
-            </div>
-        </aside>
-    );
-}
+  return (
+    <aside className="sidebar">
+      <LogoSidebar name="Notes" />
+      <nav className="menu">
+        <Menu image={HouseImage} name="All Notes" />
+        <Menu image={ArchiveImage} name="Archived Notes" />
+      </nav>
+      <div className="tags">
+        <h3>Tags</h3>
+        <ul>
+          {tags.map(tag => <TagItem key={tag} name={tag} />)}
+        </ul>
+      </div>
+    </aside>
+  );
+};
 
 export default Sidebar;

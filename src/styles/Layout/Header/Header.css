@@ -1,0 +1,17 @@
+.header {
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
+    height: 3.5vh;
+    width: auto;
+    border-bottom: 1px solid #ddd;
+    padding: 2.5rem;
+    /* margin: 1rem; */
+    /* border: 1px solid red; */
+}
+
+.left-section {
+    display: flex;
+    align-items: center;
+    gap: 1.8rem;
+}
