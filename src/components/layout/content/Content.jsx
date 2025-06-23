@@ -9,35 +9,48 @@ function CreateButton({ onClick }) {
     </button>
   );
 }
-function Formulario(){
-    return(
-        <form className="formulario">
+function Formulario({ onCancel }) {
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    alert("nota guardada");
+  };
+
+  return (
+    <form className="formulario" onSubmit={handleSubmit}>
       <h1>New Note</h1>
+
       <label>Título</label>
-      <input type="text" placeholder="Tittle" />
+      <input type="text" placeholder="Title" />
 
       <label>Contenido</label>
       <textarea placeholder="Start typing..."></textarea>
 
       <button type="submit">Guardar</button>
+   <button type="button" className="cancel-button" onClick={onCancel}>
+    Cancelar</button>
+
+
     </form>
-
-
-    );
+  );
 }
 
+
 function Content() {
-    const [mostrarFormulario, setMostrarFormulario] = useState(false);
-  
+  const [mostrarFormulario, setMostrarFormulario] = useState(false);
+
+  const handleCancel = () => {
+    setMostrarFormulario(false);
+  };
 
   return (
     <div className="content">
-        {!mostrarFormulario && (
-      <CreateButton onClick={() =>setMostrarFormulario(true)} />
+      {!mostrarFormulario && (
+        <CreateButton onClick={() => setMostrarFormulario(true)} />
       )}
-       {mostrarFormulario && <Formulario />}
+      {mostrarFormulario && <Formulario onCancel={handleCancel} />}
     </div>
   );
 }
+
 
 export default Content;
