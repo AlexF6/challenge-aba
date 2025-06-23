@@ -1,5 +1,6 @@
 //src/components/layout/content/Content.jsx
 import "../../../styles/layout/content/Content.css"
+import { useState } from "react";
 
 function CreateButton({ onClick }) {
   return (
@@ -10,18 +11,31 @@ function CreateButton({ onClick }) {
 }
 function Formulario(){
     return(
-        alert("prueba para el form")
+        <form className="formulario">
+      <h1>New Note</h1>
+      <label>Título</label>
+      <input type="text" placeholder="Tittle" />
+
+      <label>Contenido</label>
+      <textarea placeholder="content..."></textarea>
+
+      <button type="submit">Guardar</button>
+    </form>
 
 
     );
 }
 
 function Content() {
+    const [mostrarFormulario, setMostrarFormulario] = useState(false);
   
 
   return (
     <div className="content">
-      <CreateButton onClick={Formulario} />
+        {!mostrarFormulario && (
+      <CreateButton onClick={() =>setMostrarFormulario(true)} />
+      )}
+       {mostrarFormulario && <Formulario />}
     </div>
   );
 }
