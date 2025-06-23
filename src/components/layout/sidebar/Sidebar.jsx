@@ -1,6 +1,6 @@
 //src/components/layout/sidebar/Sidebar.jsx
 import React from "react";
-import "../../../styles/Layout/sidebar/Sidebar.css";
+import "../../../styles/layout/sidebar/Sidebar.css";
 import HouseImage from "../../../assets/house.svg";
 import ArchiveImage from "../../../assets/archive.svg";
 import TagItem from "./TagItem";

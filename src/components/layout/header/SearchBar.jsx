@@ -1,5 +1,6 @@
+//src/components/layout/header/SearchBar.jsx
 import React from "react";
-import "../../../styles/Layout/Header/SearchBar.css"
+import "../../../styles/layout/header/SearchBar.css"
 import LupaImage from "../../../assets/lupa.svg"
 
 const SearchBar = () => {
