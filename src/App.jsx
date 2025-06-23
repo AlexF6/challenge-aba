@@ -15,6 +15,7 @@ function App() {
         <Header/>
         <div className='main-section'>
           <div className='note-section'>
+            <Content />
 
           </div>
           <div className='note-details'>

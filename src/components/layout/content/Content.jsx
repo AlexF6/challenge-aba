@@ -1,10 +1,29 @@
 //src/components/layout/content/Content.jsx
 import "../../../styles/layout/content/Content.css"
 
-const Content = ( {message} ) => {
-    return (
-        <h1>{message}</h1>
+function CreateButton({ onClick }) {
+  return (
+    <button className="create-button" onClick={onClick}>
+      + Create New Note
+    </button>
+  );
+}
+function Formulario(){
+    return(
+        alert("prueba para el form")
+
+
     );
-};
+}
+
+function Content() {
+  
+
+  return (
+    <div className="content">
+      <CreateButton onClick={Formulario} />
+    </div>
+  );
+}
 
 export default Content;
