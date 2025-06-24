@@ -4,9 +4,12 @@ import { useState } from "react";
 
 function CreateButton({ onClick }) {
   return (
-    <button className="create-button" onClick={onClick}>
-      + Create New Note
-    </button>
+    <div className="button-container">
+      <button className="create-button" onClick={onClick}>
+        + Create New Note
+      </button>
+    </div>
+
   );
 }
 function Formulario({ onCancel }) {

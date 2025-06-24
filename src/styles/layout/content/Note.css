@@ -1,0 +1,25 @@
+.note-container {
+    display: flex;
+    flex-direction: column;
+    gap: 0.7rem;
+    padding: 0.5rem;
+    /* border: 1px solid red; */
+    border-bottom: 1px solid #ddd;
+}
+
+.note-title {
+    font-size: 1.5rem;
+    font-weight: 350;
+}
+
+.tag-container {
+    display: flex;
+    gap: 1rem;
+}
+
+.tag-title {
+    padding: 0.2rem;
+    font-size: 0.8rem;
+    background-color: rgb(221, 215, 215);
+    border-radius: 5px;
+}
