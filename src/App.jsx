@@ -7,8 +7,11 @@ import Header from "./components/layout/header/Header.jsx"
 import Content from './components/layout/content/Content.jsx';
 import Details from './components/layout/details/Details.jsx';
 import Note from './components/layout/content/Note.jsx';
+import { useState } from "react";
+import Formulario from "./components/layout/content/Formulario.jsx"; 
 
 function App() {
+  const [mostrarFormulario, setMostrarFormulario] = useState(false);
   return (
     <div className='app-container'>
       <Sidebar/>
@@ -16,7 +19,7 @@ function App() {
         <Header/>
         <div className='main-section'>
           <div className='note-section'>
-            <Content />
+            <Content onCreateClick={() => setMostrarFormulario(true)} />
             <Note content="Primera nota de prueba xd" tag1="Dev" tag2="Travel" date="24 Junio 2025"/>
             <Note content="Segunda nota de prueba" tag1="Dev" tag2="Travel" date="24 Junio 2025"/>
             <Note content="Tercera nota de prueba" tag1="Dev" tag2="Travel" date="24 Junio 2025"/>
@@ -24,6 +27,11 @@ function App() {
             <Note content="Quinta nota de prueba" tag1="Dev" tag2="Travel" date="24 Junio 2025"/>
           </div>
           <div className='note-details'>
+    
+            {mostrarFormulario && (
+              <Formulario onCancel={() => setMostrarFormulario(false)} />
+            )}
+          </div>
 
           </div>
           <div className='note-actions'>
@@ -31,7 +39,7 @@ function App() {
           </div>
         </div>
       </div>
-    </div>
+
     
   );
 }

@@ -30,7 +30,7 @@
 }
 
 .create-button:hover {
-  background-color: #5f10b9;
+  background-color: #3b5df6;
 }
 
 .formulario {
@@ -67,11 +67,11 @@
 
 .formulario input:focus,
 .formulario textarea:focus {
-  border-color: #5c0168;
+  border-color: #3b5df6;
 }
 
 .formulario button[type="submit"] {
-  background-color: #5f10b9;
+  background-color: #3b5df6;
   color: white;
   padding: 10px 20px;
   border: none;
@@ -82,7 +82,7 @@
 }
 
 .formulario button[type="submit"]:hover {
-  background-color: #4e1f8b;
+  background-color: #3b5df6;
 }
 
 .cancel-button {
@@ -97,9 +97,11 @@
 }
 
 .cancel-button:hover {
-  color: #721796; 
+  color: #3b5df6; 
   text-decoration: underline;
 }
+
+
 
 @keyframes fadeInUp {
   from {

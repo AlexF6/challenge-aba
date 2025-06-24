@@ -12,33 +12,9 @@ function CreateButton({ onClick }) {
 
   );
 }
-function Formulario({ onCancel }) {
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    alert("nota guardada");
-  };
-
-  return (
-    <form className="formulario" onSubmit={handleSubmit}>
-      <h1>New Note</h1>
-
-      <label>Título</label>
-      <input type="text" placeholder="Title" />
-
-      <label>Contenido</label>
-      <textarea placeholder="Start typing..."></textarea>
-
-      <button type="submit">Guardar</button>
-   <button type="button" className="cancel-button" onClick={onCancel}>
-    Cancelar</button>
 
 
-    </form>
-  );
-}
-
-
-function Content() {
+function Content({ onCreateClick }) {
   const [mostrarFormulario, setMostrarFormulario] = useState(false);
 
   const handleCancel = () => {
@@ -48,10 +24,10 @@ function Content() {
   return (
     <div className="content">
       {!mostrarFormulario && (
-        <CreateButton onClick={() => setMostrarFormulario(true)} />
+        <CreateButton onClick={onCreateClick} />
       )}
-      {mostrarFormulario && <Formulario onCancel={handleCancel} />}
     </div>
+      
   );
 }
 

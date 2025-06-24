@@ -4,15 +4,15 @@
     margin: 0;
     align-items: center;
     font-size: 2.3rem;
-    font-weight: bold;
-    font-style: italic;
+    font-weight: 100;
+    font-family: 'Pacifico', cursive;
     /* border: 1px solid red; */
 }
 
 .logo-image {
     max-width: 100%;
     height: auto;
-    width: 2.5rem;
+    width: 3rem;
     min-width: 1.5rem;
     /* border: 1px solid red; */
 }
