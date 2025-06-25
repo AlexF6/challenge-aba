@@ -1,3 +1,5 @@
+/* src/styles/layout/note-section/Section.css */
+
 /*.create-button {
   background-color: #3b82f6; 
   color: white;              
@@ -15,13 +17,16 @@
 }*/
 
 .button-container {
-  text-align: center;
+  display: flex;
+  justify-content: center;
+  position: relative;
 }
 
 .create-button {
   background-color: #3b5df6;
   color: white;
   padding: 0.8rem 4rem 0.8rem 4rem;
+  width: 300px;
   border-color: white;
   border-radius: 8px;
   font-size: 16px;
@@ -41,20 +46,24 @@
   box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
   padding: 32px;
   font-family: system-ui, sans-serif;
+  position: absolute;
+  width: 25rem;
+  left: 100%;
+  top: -80%;
 }
 
 .form-section {
   margin-bottom: 24px;
 }
 
-label {
+.form-label {
   display: block;
   margin-bottom: 8px;
   font-size: 15px;
 }
 
-input[type="text"],
-textarea {
+.input-form[type="text"],
+.form-textarea {
   width: 100%;
   padding: 12px;
   border: 1px solid #d1d5db;
@@ -62,18 +71,18 @@ textarea {
   font-size: 15px;
 }
 
-textarea {
+.form-textarea {
   min-height: 140px;
   resize: vertical;
 }
 
-.tag {
+.form-tags {
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
 }
 
-.tag {
+.form-tag {
   background: #e5e7eb;
   padding: 6px 14px;
   border-radius: 20px;
@@ -82,12 +91,12 @@ textarea {
   transition: all 0.2s ease;
 }
 
-.tag.selected {
+.form-tag.selected {
   background-color: #3b82f6;
   color: white;
 }
 
-.fecha {
+.form-fecha {
   font-size: 14px;
   color: #555;
   margin: -10px 0 20px;
@@ -98,7 +107,7 @@ textarea {
   gap: 12px;
 }
 
-.save {
+.form-save {
   background-color: #3b82f6;
   color: white;
   padding: 10px 20px;
@@ -108,11 +117,11 @@ textarea {
   cursor: pointer;
 }
 
-.save:hover {
+.form-save:hover {
   background-color: #2563eb;
 }
 
-.cancel {
+.form-cancel {
   background-color: #e5e7eb;
   color: #111827;
   padding: 10px 20px;
@@ -122,10 +131,6 @@ textarea {
   cursor: pointer;
 }
 
-.cancel:hover {
+.form-cancel:hover {
   background-color: #d1d5db;
 }
-
-
-
-

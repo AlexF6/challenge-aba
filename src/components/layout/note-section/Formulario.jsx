@@ -1,7 +1,6 @@
-
 //src/components/layout/note-section/Formulario.jsx
 import React, { useState } from 'react';
-import "../../../styles/layout/note-section/Content.css"
+import "../../../styles/layout/note-section/Section.css";
 
 function Formulario({ onCancel }) {
   const [titulo, setTitulo] = useState('');
@@ -23,8 +22,9 @@ function Formulario({ onCancel }) {
   return (
     <form className="formulario" onSubmit={handleSubmit}>
       <div className="form-section">
-        <label><strong>Título</strong></label>
+        <label className='form-label'><strong>Título</strong></label>
         <input
+          className='input-form'
           type="text"
           value={titulo}
           placeholder="Title"
@@ -33,12 +33,12 @@ function Formulario({ onCancel }) {
       </div>
 
       <div className="form-section">
-        <label><strong>Categoría</strong></label>
-        <div className="tag">
+        <label className='form-label'><strong>Categoría</strong></label>
+        <div className="form-tags">
           {categorias.map((cat) => (
             <span
               key={cat}
-              className={`tag ${categoria === cat ? 'selected' : ''}`}
+              className={`form-tag ${categoria === cat ? 'selected' : ''}`}
               onClick={() => setCategoria(cat)}
             >
               {cat}
@@ -47,11 +47,12 @@ function Formulario({ onCancel }) {
         </div>
       </div>
 
-      <p className="fecha">Last edited <strong>{fecha}</strong></p>
+      <p className="form-fecha">Last edited <strong>{fecha}</strong></p>
 
       <div className="form-section">
-        <label><strong>Contenido</strong></label>
+        <label className='form-label'><strong>Contenido</strong></label>
         <textarea
+          className='form-textarea'
           value={contenido}
           placeholder="Start typing..."
           onChange={(e) => setContenido(e.target.value)}
@@ -59,8 +60,8 @@ function Formulario({ onCancel }) {
       </div>
 
       <div className="form-footer">
-        <button type="submit" className="save">Save Note</button>
-        <button type="button" className="cancel" onClick={onCancel}>Cancel</button>
+        <button type="submit" className="form-save">Save Note</button>
+        <button type="button" className="form-cancel" onClick={onCancel}>Cancel</button>
       </div>
     </form>
   );

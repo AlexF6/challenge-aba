@@ -4,8 +4,10 @@ import "../../../styles/layout/header/Header.css"
 import HeaderIcon from "./HeaderIcon";
 import HeaderTitle from "./HeaderTitle"
 import SearchBar from "./SearchBar";
+import { useState } from "react";
 
 const Header = () => {
+
     return (
         <header className="header">
             <HeaderTitle title="All Notes"/>

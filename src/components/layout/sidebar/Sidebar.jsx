@@ -37,7 +37,7 @@ const Sidebar = () => {
           onClick={() => setSelectedMenu("Archived Notes")}
         />
       </nav>
-      <div className="tags">
+      <div className="sidebar-tags">
         <h3>Tags</h3>
         <ul>
           {tags.map(tag => <TagItem key={tag} name={tag} />)}

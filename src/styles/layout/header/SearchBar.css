@@ -14,10 +14,14 @@
 }
 
 .search-input {
-  width: 22rem;
+  width: 20rem;
   padding: 0.9rem;
   border-radius: 8px;
   border: 1px solid #ccc;
   font-family: "Roboto", sans-serif;
   font-size: medium;
+}
+
+.hidden {
+  visibility: hidden;
 }

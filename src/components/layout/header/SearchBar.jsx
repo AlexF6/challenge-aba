@@ -1,16 +1,27 @@
 //src/components/layout/header/SearchBar.jsx
 import React from "react";
+import { useState } from "react";
 import "../../../styles/layout/header/SearchBar.css"
 import LupaImage from "../../../assets/lupa.svg"
 
-const SearchBar = () => {
+const SearchBar = ( {onClick} ) => {
+
+    const [isActive, setIsActive] = useState(false);
+
     return (
         <div className="search-container">
-            <img className="search-icon" src={LupaImage}/>
+            {/* {!isActive && <img className="search-icon" src={LupaImage}/>} */}
+            <img
+                className = {`search-icon ${isActive? "hidden" : ""}`}
+                src={LupaImage}
+            />
+            
             <input
-                type="text"  
+                type="text"     
                 className="search-input"
-                placeholder="         Search by title, content or tags..."
+                onClick={() => setIsActive(true)}
+                onBlur={() => setIsActive(false)}
+                placeholder={isActive ? "" : "         Search by title, content or tags..."}
             />
         </div>
     );
