@@ -1,5 +1,5 @@
 //src/components/layout/note-section/Content.jsx
-import "../../../styles/layout/content/Content.css"
+import "../../../styles/layout/note-section/Content.css"
 import { useState } from "react";
 
 function CreateButton({ onClick }) {
