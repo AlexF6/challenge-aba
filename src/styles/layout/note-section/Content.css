@@ -67,7 +67,7 @@ textarea {
   resize: vertical;
 }
 
-.tags {
+.tag {
   display: flex;
   flex-wrap: wrap;
   gap: 8px;

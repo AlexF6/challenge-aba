@@ -34,7 +34,7 @@ function Formulario({ onCancel }) {
 
       <div className="form-section">
         <label><strong>Categoría</strong></label>
-        <div className="tags">
+        <div className="tag">
           {categorias.map((cat) => (
             <span
               key={cat}
