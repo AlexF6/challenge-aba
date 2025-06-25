@@ -1,10 +1,8 @@
-<<<<<<< Updated upstream:src/components/layout/note-section/Formulario.jsx
-//src/components/layout/note-section/Formulario.jsx
-=======
-import React, { useState } from 'react';
-import "../../../styles/layout/content/Content.css";
 
->>>>>>> Stashed changes:src/components/layout/content/Formulario.jsx
+//src/components/layout/note-section/Formulario.jsx
+import React, { useState } from 'react';
+import "../../../styles/layout/note-section/Content.css"
+
 function Formulario({ onCancel }) {
   const [titulo, setTitulo] = useState('');
   const [contenido, setContenido] = useState('');
