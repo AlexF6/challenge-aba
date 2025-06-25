@@ -2,5 +2,6 @@
     width: 2rem;
     height: auto;
     text-align: right;
+    cursor: pointer;
     /* border: 1px solid red; */
 }
