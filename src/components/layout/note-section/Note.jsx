@@ -1,4 +1,4 @@
-//src/components/layout/content/Note.jsx
+//src/components/layout/note-section/Note.jsx
 import "../../../styles/layout/content/Note.css"
 
 const Note = ( {content, tag1, tag2, date} ) => {

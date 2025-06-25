@@ -1,4 +1,4 @@
-//src/components/layout/content/Content.jsx
+//src/components/layout/note-section/Content.jsx
 import "../../../styles/layout/content/Content.css"
 import { useState } from "react";
 

@@ -1,3 +1,4 @@
+//src/components/layout/note-section/Formulario.jsx
 function Formulario({ onCancel }) {
   const handleSubmit = (e) => {
     e.preventDefault();

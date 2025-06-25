@@ -4,11 +4,11 @@ import "./styles/index.css"
 import "./styles/App.css"
 import Sidebar from "./components/layout/sidebar/Sidebar.jsx"
 import Header from "./components/layout/header/Header.jsx"
-import Content from './components/layout/content/Content.jsx';
+import Content from './components/layout/note-section/Content.jsx';
 import Details from './components/layout/details/Details.jsx';
-import Note from './components/layout/content/Note.jsx';
+import Note from './components/layout/note-section/Note.jsx';
 import { useState } from "react";
-import Formulario from "./components/layout/content/Formulario.jsx"; 
+import Formulario from "./components/layout/note-section/Formulario.jsx"; 
 
 function App() {
   const [mostrarFormulario, setMostrarFormulario] = useState(false);
