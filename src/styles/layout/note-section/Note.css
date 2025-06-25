@@ -5,6 +5,13 @@
     padding: 0.5rem;
     /* border: 1px solid red; */
     border-bottom: 1px solid #ddd;
+    background-color: inherit;
+    transition: background-color 0.3s;
+}
+
+.note-container:hover {
+    background-color: #ddd;
+    border-radius: 8px;
 }
 
 .note-title {

@@ -1,11 +1,12 @@
 .search-container {
+  display: flex;
   position: relative;
+  align-items: center;
 }
 
 .search-icon {
   position: absolute;
-  margin-top: 0.3rem;
-  margin-left: 0.5rem;
+  left: 0.6rem;
   width: 2rem;
   height: 2rem;
   filter: opacity(0.5);
@@ -13,9 +14,10 @@
 }
 
 .search-input {
-  width: 16rem;
+  width: 22rem;
   padding: 0.9rem;
   border-radius: 8px;
   border: 1px solid #ccc;
   font-family: "Roboto", sans-serif;
+  font-size: medium;
 }

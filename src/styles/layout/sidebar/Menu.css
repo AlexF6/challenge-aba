@@ -1,16 +1,33 @@
 .menu {
     display: flex;
     flex-direction: column;
-    gap: 1.5rem;
+    gap: 0.3rem;
     margin-top: 1.5rem;
     border-bottom: 1px solid #ddd;
     padding-bottom: 2rem;
 }
 
 .menu-item{
+    position: relative;
+    padding: 0.6rem 0.5rem 0.6rem 0.5rem;
+    background-color: white;
     display: flex;
     align-items: center;
     gap: 0.5rem;
+    border-radius: 8px;
+    transition: background-color 0.3s;
+}
+
+.menu-item:hover {
+    background-color: #ddd;
+}
+
+.menu-item.selected {
+    background-color: #ddd;
+}
+
+.menu-item.selected {
+    background-color: #ddd;
 }
 
 .menu a{
@@ -24,6 +41,15 @@
 }
 
 .menu-icon {
+    max-width: 100%;
+    /* border: 1px solid red; */
+    height: auto;
+    width: 1.5rem;
+}
+
+.menu-icon2 {
+    position: absolute;
+    right: 0.5rem;
     max-width: 100%;
     /* border: 1px solid red; */
     height: auto;

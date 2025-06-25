@@ -3,5 +3,6 @@
     height: auto;
     text-align: right;
     cursor: pointer;
+    opacity: 50%;
     /* border: 1px solid red; */
 }
