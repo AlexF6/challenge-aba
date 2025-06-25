@@ -19,6 +19,7 @@
 
 .note-section {
     display: flex;
+    height: 100%;
     flex-direction: column;
     gap: 1rem;
     flex: 2;

@@ -18,6 +18,7 @@ function App() {
       <div className='header-content'>
         <Header/>
         <div className='main-section'>
+
           <div className='note-section'>
             <Content onCreateClick={() => setMostrarFormulario(true)} />
             <Note content="Primera nota de prueba xd" tag1="Dev" tag2="Travel" date="24 Junio 2025"/>
@@ -26,17 +27,19 @@ function App() {
             <Note content="Cuarta nota de prueba" tag1="Dev" tag2="Travel" date="24 Junio 2025"/>
             <Note content="Quinta nota de prueba" tag1="Dev" tag2="Travel" date="24 Junio 2025"/>
           </div>
+
           <div className='note-details'>
-    
             {mostrarFormulario && (
               <Formulario onCancel={() => setMostrarFormulario(false)} />
             )}
           </div>
 
-          </div>
           <div className='note-actions'>
 
           </div>
+
+        </div>
+
         </div>
       </div>
 
