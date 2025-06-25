@@ -1,25 +1,69 @@
+<<<<<<< Updated upstream:src/components/layout/note-section/Formulario.jsx
 //src/components/layout/note-section/Formulario.jsx
+=======
+import React, { useState } from 'react';
+import "../../../styles/layout/content/Content.css";
+
+>>>>>>> Stashed changes:src/components/layout/content/Formulario.jsx
 function Formulario({ onCancel }) {
+  const [titulo, setTitulo] = useState('');
+  const [contenido, setContenido] = useState('');
+  const [categoria, setCategoria] = useState(null);
+  const categorias = ['Dev', 'React', 'UI', 'Backend'];
+
+  const fecha = new Date().toLocaleDateString('en-GB', {
+    day: '2-digit',
+    month: 'short',
+    year: 'numeric'
+  });
+
   const handleSubmit = (e) => {
     e.preventDefault();
-    alert("nota guardada");
+    alert("Nota guardada:\n\nTítulo: " + titulo + "\nContenido: " + contenido + "\nCategoría: " + categoria);
   };
 
   return (
     <form className="formulario" onSubmit={handleSubmit}>
-      <h1>New Note</h1>
+      <div className="form-section">
+        <label><strong>Título</strong></label>
+        <input
+          type="text"
+          value={titulo}
+          placeholder="Title"
+          onChange={(e) => setTitulo(e.target.value)}
+        />
+      </div>
 
-      <label>Título</label>
-      <input type="text" placeholder="Title" />
+      <div className="form-section">
+        <label><strong>Categoría</strong></label>
+        <div className="tags">
+          {categorias.map((cat) => (
+            <span
+              key={cat}
+              className={`tag ${categoria === cat ? 'selected' : ''}`}
+              onClick={() => setCategoria(cat)}
+            >
+              {cat}
+            </span>
+          ))}
+        </div>
+      </div>
 
-      <label>Contenido</label>
-      <textarea placeholder="Start typing..."></textarea>
+      <p className="fecha">Last edited <strong>{fecha}</strong></p>
 
-      <button type="submit">Guardar</button>
-   <button type="button" className="cancel-button" onClick={onCancel}>
-    Cancelar</button>
+      <div className="form-section">
+        <label><strong>Contenido</strong></label>
+        <textarea
+          value={contenido}
+          placeholder="Start typing..."
+          onChange={(e) => setContenido(e.target.value)}
+        />
+      </div>
 
-
+      <div className="form-footer">
+        <button type="submit" className="save">Save Note</button>
+        <button type="button" className="cancel" onClick={onCancel}>Cancel</button>
+      </div>
     </form>
   );
 }

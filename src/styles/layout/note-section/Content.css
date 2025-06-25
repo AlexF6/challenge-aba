@@ -34,84 +34,96 @@
 }
 
 .formulario {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  margin: 2rem auto;
-  padding: 2rem;
-  max-width: 500px;
-  background-color: #f9fafb;
+  max-width: 600px;
+  margin: 40px auto;
+  background: #ffffff;
   border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  animation: fadeInUp 0.4s ease-out;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+  padding: 32px;
+  font-family: system-ui, sans-serif;
 }
 
-.formulario h1 {
-  margin-bottom: 1rem;
-  color: #111827;
-  font-size: 1.5rem;
+.form-section {
+  margin-bottom: 24px;
 }
 
-.formulario input,
-.formulario textarea {
-  padding: 10px 14px;
+label {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 15px;
+}
+
+input[type="text"],
+textarea {
+  width: 100%;
+  padding: 12px;
   border: 1px solid #d1d5db;
-  border-radius: 8px;
-  font-size: 16px;
-  background-color: white;
-  outline: none;
-  transition: border-color 0.2s;
+  border-radius: 6px;
+  font-size: 15px;
 }
 
-
-
-.formulario input:focus,
-.formulario textarea:focus {
-  border-color: #3b5df6;
+textarea {
+  min-height: 140px;
+  resize: vertical;
 }
 
-.formulario button[type="submit"] {
-  background-color: #3b5df6;
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.tag {
+  background: #e5e7eb;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.tag.selected {
+  background-color: #3b82f6;
+  color: white;
+}
+
+.fecha {
+  font-size: 14px;
+  color: #555;
+  margin: -10px 0 20px;
+}
+
+.form-footer {
+  display: flex;
+  gap: 12px;
+}
+
+.save {
+  background-color: #3b82f6;
   color: white;
   padding: 10px 20px;
   border: none;
-  border-radius: 8px;
-  font-size: 16px;
+  border-radius: 6px;
+  font-weight: 500;
   cursor: pointer;
-  transition: background-color 0.3s;
 }
 
-.formulario button[type="submit"]:hover {
-  background-color: #3b5df6;
+.save:hover {
+  background-color: #2563eb;
 }
 
-.cancel-button {
-  background-color: transparent;
-  color: #6b7280;
+.cancel {
+  background-color: #e5e7eb;
+  color: #111827;
   padding: 10px 20px;
-  font-size: 16px;
   border: none;
-  border-radius: 8px;
+  border-radius: 6px;
+  font-weight: 500;
   cursor: pointer;
-  transition: color 0.3s;
 }
 
-.cancel-button:hover {
-  color: #3b5df6; 
-  text-decoration: underline;
-}
-
-
-
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+.cancel:hover {
+  background-color: #d1d5db;
 }
 
 
