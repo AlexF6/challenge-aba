@@ -1,0 +1,63 @@
+/*.note-actions {
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.note-button {
+  padding: 10px 20px;
+  font-size: 16px;
+  border: 1px solid rgb(73, 68, 68);
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.note-button-archived {
+  width: 20px;
+  height: 20px;
+  margin-right: 8px;
+}*/
+
+.note-actions {
+  text-align: center;       
+  margin-top: 1rem;         
+}
+
+.note-button {
+    width: 250px;           
+  padding: 12px;            
+  font-size: 16px;         
+  border: 1px solid rgb(212, 209, 209); 
+  border-radius: 6px;       
+  background-color: white;  
+  cursor: pointer;          
+  display: flex;           
+  align-items: center;      
+  justify-content: center;  
+  gap: 8px;                 
+  margin: 0 auto;   
+ justify-content: flex-start;    
+      
+}
+
+.note-button-archived {
+  width: 20px;             
+  height: 20px;
+} 
+
+.note-button-delete {
+  width: 20px;
+  height: 20px;
+}
+
+
+
+
+
+
+
+
+
+  
+
+
+
