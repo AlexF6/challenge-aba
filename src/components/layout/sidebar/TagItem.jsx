@@ -1,4 +1,3 @@
-//src/components/layout/sidebar/TagItem.jsx
 import React from "react";
 import TagImage from "../../../assets/tag.svg";
 import "./TagItem.css";

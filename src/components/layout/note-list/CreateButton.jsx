@@ -1,4 +1,3 @@
-//src/components/layout/note-list/CreateButton.jsx
 import { useState } from "react";
 import Formulario from "./Formulario";
 

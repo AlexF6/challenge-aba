@@ -1,4 +1,3 @@
-//src/components/layout/header/SearchBar.jsx
 import React from "react";
 import { useState } from "react";
 import "./SearchBar.css"

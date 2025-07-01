@@ -1,4 +1,3 @@
-//src/components/layout/sidebar/Menu.jsx
 import React from "react";
 import "./Menu.css";
 

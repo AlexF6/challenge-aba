@@ -1,4 +1,3 @@
-//src/components/layout/note-list/Formulario.jsx
 import React, { useState } from 'react';
 import "./Formulario.css";
 

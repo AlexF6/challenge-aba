@@ -1,4 +1,3 @@
-//src/components/layout/sidebar/Sidebar.jsx
 import React from "react";
 import { useState } from "react";
 import "./Sidebar.css";

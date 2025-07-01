@@ -1,4 +1,3 @@
-//src/components/layout/header/HeaderTitle.jsx
 import "./HeaderTitle.css"
 
 const HeaderTitle = ( {title} ) => {

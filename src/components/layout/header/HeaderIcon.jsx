@@ -1,4 +1,3 @@
-//src/components/layout/header/HeaderIcon.jsx
 import "./HeaderIcon.css"
 import ConfigImage from "../../../assets/config.svg"
 

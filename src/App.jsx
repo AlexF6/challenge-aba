@@ -1,5 +1,3 @@
-
-//src/App.jsx
 import React from 'react';
 import "./App.css"
 import Sidebar from "./components/layout/sidebar/Sidebar.jsx"
@@ -11,7 +9,7 @@ import NoteButtons from './components/layout/note-actions/NoteButtons.jsx';
 function App() {
   
   return (
-    <div className='app-container'>
+    <div className='app-layout'>
       <Sidebar/>
       <div className='header-content'>
         <Header/>

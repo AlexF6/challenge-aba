@@ -1,4 +1,3 @@
-//src/components/layout/note-details/Details.jsx
 import "./Details.css"
 
 const Details = ( {message} ) => {
