@@ -1,7 +1,7 @@
 //src/components/layout/sidebar/Sidebar.jsx
 import React from "react";
 import { useState } from "react";
-import "../../../styles/layout/sidebar/Sidebar.css";
+import "./Sidebar.css";
 import HouseImage from "../../../assets/house.svg";
 import ArchiveImage from "../../../assets/archive.svg";
 import TagItem from "./TagItem";

@@ -1,6 +1,6 @@
 //src/components/layout/sidebar/Menu.jsx
 import React from "react";
-import "../../../styles/layout/sidebar/Menu.css";
+import "./Menu.css";
 
 const Menu = ({ name, image, image2, selected, onClick }) => {
   return (

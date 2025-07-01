@@ -1,5 +1,5 @@
 //src/components/layout/header/HeaderTitle.jsx
-import "../../../styles/layout/header/HeaderTitle.css"
+import "./HeaderTitle.css"
 
 const HeaderTitle = ( {title} ) => {
     return (

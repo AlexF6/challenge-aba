@@ -1,5 +1,5 @@
 //src/components/layout/header/HeaderIcon.jsx
-import "../../../styles/layout/header/HeaderIcon.css"
+import "./HeaderIcon.css"
 import ConfigImage from "../../../assets/config.svg"
 
 const HeaderIcon = () => {

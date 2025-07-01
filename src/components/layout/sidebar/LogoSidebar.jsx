@@ -1,7 +1,7 @@
 //src/components/layout/sidebar/LogoSidebar.jsx
 import React from "react";
 import PlumaImage from "../../../assets/feather2.svg";
-import "../../../styles/layout/sidebar/LogoSidebar.css";
+import "./LogoSidebar.css";
 
 const LogoSidebar = ({ name }) => {
   return (

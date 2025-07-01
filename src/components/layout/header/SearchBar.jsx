@@ -1,7 +1,7 @@
 //src/components/layout/header/SearchBar.jsx
 import React from "react";
 import { useState } from "react";
-import "../../../styles/layout/header/SearchBar.css"
+import "./SearchBar.css"
 import LupaImage from "../../../assets/lupa.svg"
 
 const SearchBar = ( {onClick} ) => {

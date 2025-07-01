@@ -1,5 +1,5 @@
 import ArchivedImage from "../../../assets/archive.svg"
-import "../../../styles/layout/note-actions/NoteButtons.css"
+import "./NoteButtons.css"
 import DeleteImage from "../../../assets/deletee.png"
 
 

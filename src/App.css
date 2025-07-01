@@ -17,7 +17,7 @@
     /* border: 1px solid red; */
 }
 
-.note-section {
+.note-list {
     display: flex;
     height: 100%;
     flex-direction: column;

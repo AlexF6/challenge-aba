@@ -1,5 +1,5 @@
-//src/components/layout/note-section/Note.jsx
-import "../../../styles/layout/note-section/Note.css"
+//src/components/layout/note-list/Note.jsx
+import "./Note.css"
 
 const Note = ( {content, tag1, tag2, date} ) => {
 

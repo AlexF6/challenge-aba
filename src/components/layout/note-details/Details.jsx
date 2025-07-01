@@ -1,5 +1,5 @@
 //src/components/layout/note-details/Details.jsx
-import "../../../styles/layout/details/Details.css"
+import "./Details.css"
 
 const Details = ( {message} ) => {
     return (

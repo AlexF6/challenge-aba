@@ -1,15 +1,11 @@
 
 //src/App.jsx
 import React from 'react';
-import "./styles/index.css"
-import "./styles/App.css"
+import "./App.css"
 import Sidebar from "./components/layout/sidebar/Sidebar.jsx"
 import Header from "./components/layout/header/Header.jsx"
-import Details from './components/layout/note-details/Details.jsx';
-import Note from './components/layout/note-section/Note.jsx';
-import { useState } from "react";
-import Formulario from "./components/layout/note-section/Formulario.jsx"; 
-import CreateButton from './components/layout/note-section/CreateButton.jsx';
+import Note from './components/layout/note-list/Note.jsx';
+import CreateButton from './components/layout/note-list/CreateButton.jsx';
 import NoteButtons from './components/layout/note-actions/NoteButtons.jsx';
 
 function App() {
@@ -21,7 +17,7 @@ function App() {
         <Header/>
         <div className='main-section'>
 
-          <div className='note-section'>
+          <div className='note-list'>
             <CreateButton/>
             <Note content="Primera nota de prueba xd" tag1="Dev" tag2="Travel" date="24 Junio 2025"/>
             <Note content="Segunda nota de prueba" tag1="Dev" tag2="Travel" date="24 Junio 2025"/>

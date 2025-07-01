@@ -1,6 +1,6 @@
-//src/components/layout/note-section/Formulario.jsx
+//src/components/layout/note-list/Formulario.jsx
 import React, { useState } from 'react';
-import "../../../styles/layout/note-section/Section.css";
+import "./Formulario.css";
 
 function Formulario({ onCancel }) {
   const [titulo, setTitulo] = useState('');
