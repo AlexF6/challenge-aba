@@ -1,5 +1,5 @@
 //src/components/layout/note-section/Content.jsx
-import "../../../styles/layout/note-section/Content.css"
+/*import "../../../styles/layout/note-section/Content.css"
 import { useState } from "react";
 
 function CreateButton({ onClick }) {
@@ -32,4 +32,4 @@ function Content({ onCreateClick }) {
 }
 
 
-export default Content;
+export default Content; */
