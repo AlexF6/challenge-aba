@@ -1,13 +1,12 @@
 .tag-item {
-    font-weight: 350;
     display: flex;
-    gap: 0.3rem;
+    align-items: center;
+    gap: 8px;
     font-size: 1.1rem;
 }
 
 .tag-icon {
-    max-width: 100%;
-    width: 1.3rem;
-    height: auto;
-    min-width: 1rem;
+    width: 20px;
+    height: 20px;
 }
+

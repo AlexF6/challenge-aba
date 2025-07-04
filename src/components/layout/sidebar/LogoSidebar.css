@@ -1,12 +1,16 @@
+.logo-sidebar-container {
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+    padding-inline: 1.5rem;
+}
+
 .logo-container {
     display: flex;
     gap: 0.3rem;
     margin: 0;
     align-items: center;
     font-size: 2.3rem;
-    font-weight: 100;
     font-family: 'Pacifico', cursive;
-    /* border: 1px solid red; */
 }
 
 .logo-image {
@@ -14,5 +18,4 @@
     height: auto;
     width: 2.5rem;
     min-width: 1.5rem;
-    /* border: 1px solid red; */
 }
