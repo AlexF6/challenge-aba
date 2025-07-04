@@ -41,12 +41,10 @@ const Sidebar = () => {
         </nav>
       </div>
       <div className="sidebar-tags-container">
-        <div className="sidebar-tags">
           <h3>Tags</h3>
           <ul>
             {tags.map(tag => <TagItem key={tag} name={tag} />)}
           </ul>
-        </div>
       </div>
 
     </aside>

@@ -17,23 +17,21 @@
 
 .sidebar-tags-container {
     padding-inline: 2.5rem;
-    margin-bottom: 1rem;
+    gap: 1rem;
     width: 100%;
     align-items: center;
 }
 
-.sidebar-tags h3 {
+.sidebar-tags-container h3 {
     padding-top: 0.5rem;
     padding-bottom: 1.5rem;
     opacity: 50%;
 }
 
-.sidebar-tags ul {
+.sidebar-tags-container ul {
     display: flex;
     flex-direction: column;
     gap: 2rem;
-    margin-top: 0;
-    padding-top: 0;
     list-style: none;
     font-size: 1.4rem;
     padding: 0;
