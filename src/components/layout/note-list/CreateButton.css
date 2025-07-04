@@ -1,14 +1,12 @@
 .button-container {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
+  margin-inline: auto;
 }
 
 .create-button {
   background-color: #3b5df6;
   color: white;
-  padding: 0.8rem 4rem 0.8rem 4rem;
+  padding: 0.8rem 4rem;
   width: 300px;
   border-color: white;
   border-radius: 8px;
@@ -18,5 +16,5 @@
 }
 
 .create-button:hover {
-  background-color: #3b5df6;
+  background-color: #3a53c4;
 }

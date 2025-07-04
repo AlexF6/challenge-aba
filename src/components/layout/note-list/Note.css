@@ -1,16 +1,14 @@
 .note-container {
     display: flex;
     flex-direction: column;
-    gap: 0.7rem;
-    padding: 0.5rem;
-    /* border: 1px solid red; */
     border-bottom: 1px solid #ddd;
-    background-color: inherit;
     transition: background-color 0.3s;
+    gap: 8px;
+    padding: 0.5rem;
 }
 
 .note-container:hover {
-    background-color: #ddd;
+    background-color: #dbdbdb;
     border-radius: 8px;
 }
 
@@ -23,9 +21,16 @@
     gap: 1rem;
 }
 
-.tag-title {
-    padding: 0.2rem;
+.tag-container p {
+    padding-block: 2px;
+    padding-inline: 0.5rem;
     font-size: 0.8rem;
     background-color: rgb(221, 215, 215);
+    border: 1px solid #ddd;
     border-radius: 5px;
+}
+
+.date {
+    font-size: 0.9rem;
+    color: #444;
 }
