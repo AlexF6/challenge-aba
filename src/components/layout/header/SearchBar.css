@@ -6,9 +6,9 @@
 
 .search-icon {
   position: absolute;
-  left: 0.6rem;
-  width: 2rem;
-  height: 2rem;
+  inset: 0.5rem;
+  width: 1.5rem;
+  height: 1.5rem;
   filter: opacity(0.5);
   pointer-events: none;
 }

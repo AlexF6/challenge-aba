@@ -1,3 +1,4 @@
+import LogoSidebar from "../sidebar/LogoSidebar";
 import "./Header.css"
 import HeaderIcon from "./HeaderIcon";
 import HeaderTitle from "./HeaderTitle"
@@ -7,11 +8,14 @@ import { useState } from "react";
 const Header = () => {
 
     return (
-        <header className="header">
-            <HeaderTitle title="All Notes"/>
-            <div className="left-section">
-                <SearchBar/>
-                <HeaderIcon/>
+        <header>
+            <div className="responsive-header"><LogoSidebar name="Notes"/></div>
+            <div className="header-container">
+                <HeaderTitle title="All Notes"/>
+                <div className="left-section">
+                    <SearchBar/>
+                    <HeaderIcon/>
+                </div>
             </div>
         </header>
     );

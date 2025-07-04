@@ -1,17 +1,39 @@
-.header {
+.header-container {
     display: flex;
     align-items: center;
     justify-content:space-between;
-    height: 6vh;
+    padding-block: 1rem;
+    padding-inline: 2rem;
     width: auto;
     border-bottom: 1px solid #ddd;
-    padding: 2.5rem;
-    /* margin: 1rem; */
-    /* border: 1px solid red; */
+    display: none;
 }
 
 .left-section {
     display: flex;
     align-items: center;
     gap: 1.8rem;
+}
+
+.responsive-header {
+    display: flex;
+    margin-inline: auto;
+    align-items: center;
+    width: 100%;
+    padding-inline: 2rem;
+    padding-block: 1rem;
+    background-color: #ddd;
+}
+
+
+@media (min-width: 1024px) {
+    .responsive-header {
+        display: none;
+    }
+}
+
+@media (min-width: 1024px) {
+    .header-container {
+        display: flex;
+    }
 }

@@ -9,7 +9,6 @@ const SearchBar = ( {onClick} ) => {
 
     return (
         <div className="search-container">
-            {/* {!isActive && <img className="search-icon" src={LupaImage}/>} */}
             <img
                 className = {`search-icon ${isActive? "hidden" : ""}`}
                 src={LupaImage}
