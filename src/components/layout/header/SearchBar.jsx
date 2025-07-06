@@ -11,13 +11,13 @@ const SearchBar = ( {onClick} ) => {
         <div className="search-container">
             {/* {!isActive && <img className="search-icon" src={LupaImage}/>} */}
             <img
-                className = {`search-icon ${isActive? "hidden" : ""}`}
+                className = {`search-icon`}
                 src={LupaImage}
             />
             
             <input
                 type="text"     
-                className="search-input"
+                className={`search-input ${isActive? "go-right" : ""}`}
                 onClick={() => setIsActive(true)}
                 onBlur={() => setIsActive(false)}
                 placeholder={isActive ? "" : "         Search by title, content or tags..."}

@@ -22,6 +22,6 @@
   font-size: medium;
 }
 
-.hidden {
-  visibility: hidden;
+.go-right {
+  padding-left: 3rem;
 }
