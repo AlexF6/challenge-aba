@@ -1,38 +1,39 @@
 .sidebar {
-    /* box-sizing: border-box; */
-    width: 20%;
-    height: 100%;
+    width: 350px;
+    height: 100vh;
     background: white;
-    padding: 1rem;
-    /* margin: 0.3rem; */
-    margin-left: 1rem;
+    margin-inline: auto;
     display: flex;
     flex-direction:column;
     border-right: 1px solid #ddd;
+    display: none;
 }
 
-/* Lista */
-
-.sidebar-tags {
-    margin-top: 0.5rem;
+@media (min-width: 1024px) {
+    .sidebar {
+        display: flex;
+    }
 }
 
-.sidebar-tags h3 {
-    font-weight: 100;
-    padding-top: 0;
-    margin-top: 0;
-    margin-bottom: 1.5rem;
+.sidebar-tags-container {
+    padding-inline: 2.5rem;
+    gap: 1rem;
+    width: 100%;
+    align-items: center;
 }
 
-.sidebar-tags ul {
+.sidebar-tags-container h3 {
+    padding-top: 0.5rem;
+    padding-bottom: 1.5rem;
+    opacity: 50%;
+}
+
+.sidebar-tags-container ul {
     display: flex;
     flex-direction: column;
-    gap: 2.5rem;
-    margin-top: 0;
-    padding-top: 0;
+    gap: 2rem;
     list-style: none;
     font-size: 1.4rem;
-    font-weight: 500;
     padding: 0;
     margin: 0;
 }

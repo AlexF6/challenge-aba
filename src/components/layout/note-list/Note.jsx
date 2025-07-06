@@ -6,8 +6,8 @@ const Note = ( {content, tag1, tag2, date} ) => {
         <div className="note-container">
             <p className="note-title">{content}</p>
             <div className="tag-container">
-                <p className="tag-title">{tag1}</p>
-                <p className="tag-title">{tag2}</p>
+                <p>{tag1}</p>
+                <p>{tag2}</p>
             </div>
             <p className="date">{date}</p>
         </div>

@@ -1,27 +1,22 @@
-import ArchivedImage from "../../../assets/archive.svg"
 import "./NoteButtons.css"
-import DeleteImage from "../../../assets/deletee.png"
-
+import { Archive } from "lucide-react"
+import { TrashIcon } from "lucide-react"
 
 const NoteButtons = () => {
     return (
-        <div className="note-actions">
-            <button className="note-button">
-                <img src={ArchivedImage} alt="archived" className="note-button-archived"/>
-                Archive Note
-            </button>
+        <div className='note-actions-container'>
+            <div className="note-actions">
+                <button className="note-button">
+                    <Archive alt="archived" className="note-button-archived"/>
+                    Archive Note
+                </button>
 
-              <div className="note-actions">
-            <button className="note-button">
-                  <img src={DeleteImage} alt="delete" className="note-button-delete"/>
-                Delete Note
-
-            </button>
+                <button className="note-button">
+                        <TrashIcon alt="delete" className="note-button-delete"/>
+                        Delete Note
+                </button>
+            </div>
         </div>
-
-
-        </div>
-       
     )
 }
 export default NoteButtons;

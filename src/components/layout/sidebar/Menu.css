@@ -1,21 +1,31 @@
+.sidebar-menu-container {
+    padding-inline: 2rem;
+    padding-top: 1rem;
+    padding-bottom: 0;
+    width: 100%;
+    align-items: center;
+}
+
 .menu {
     display: flex;
     flex-direction: column;
-    gap: 0.3rem;
-    margin-top: 1.5rem;
-    border-bottom: 1px solid #ddd;
-    padding-bottom: 2rem;
+    gap: 0.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid#ddd ;
 }
 
 .menu-item{
-    position: relative;
-    padding: 0.6rem 0.5rem 0.6rem 0.5rem;
-    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5rem;
+    border-radius: 8px;
+    transition: background-color 0.3s;
+}
+
+.menu-item div{
     display: flex;
     align-items: center;
     gap: 0.5rem;
-    border-radius: 8px;
-    transition: background-color 0.3s;
 }
 
 .menu-item:hover {
@@ -34,24 +44,18 @@
     display: inline-block;
     align-items: center;
     font-size: 1.1rem;
-    font-weight: 350;
     color: inherit;
     text-decoration: none;
-    /* border: 1px solid red; */
 }
 
 .menu-icon {
-    max-width: 100%;
-    /* border: 1px solid red; */
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
     height: auto;
-    width: 1.5rem;
 }
 
 .menu-icon2 {
-    position: absolute;
-    right: 0.5rem;
-    max-width: 100%;
-    /* border: 1px solid red; */
     height: auto;
     width: 1.5rem;
 }

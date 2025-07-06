@@ -2,7 +2,9 @@ import "./HeaderTitle.css"
 
 const HeaderTitle = ( {title} ) => {
     return (
-        <h2 className="header-title">{title}</h2>
+        <div className="header-title-container">
+            <h2>{title}</h2>
+        </div>
     );
 };
 

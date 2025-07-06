@@ -1,4 +1,9 @@
-.header-title {
+.header-title-container {
+    display: flex;
+    align-items: center;
+}
+
+.header-title-container h2{
     font-size: 2rem;
-    /* border: 1px solid red; */
+    font-weight: bold;
 }

@@ -1,0 +1,8 @@
+.note-list-container {
+    display: flex;
+    flex-direction: column;
+    padding-inline: 2rem;
+    padding-block: 1rem;
+    margin-inline: auto;
+    gap: 1rem;
+}
