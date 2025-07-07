@@ -12,8 +12,9 @@ export default function SignUpForm() {
     await signUp.email({
     email,
     password,
+    name: "Test",
+    image: "",
     });
-    
   };
 
   return (
