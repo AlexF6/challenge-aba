@@ -1,4 +1,5 @@
 import { signIn } from "../lib/auth-client";
+import { createAuthClient } from "better-auth/react";
 import { useState } from "react";
 import { useNavigate, Link } from "react-router-dom";
 import "./SignInForm.css";
@@ -7,11 +8,10 @@ export default function SignInForm() {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     const navigate = useNavigate();
-    const authClient = {};
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-        await authClient.signIn.email({
+        await signIn.email({
         email,
         password,
         name: "Test",
