@@ -1,34 +1,18 @@
 import React from 'react';
 import "./App.css"
-import Sidebar from "./components/layout/sidebar/Sidebar.jsx"
-import Header from "./components/layout/header/Header.jsx"
-import NoteButtons from './components/layout/note-actions/NoteButtons.jsx';
-import NoteList from './components/layout/note-list/NoteList.jsx';
+import SignUpForm from './pages/SignUpForm.jsx';
+import { Route, Routes } from 'react-router-dom';
+import Layout from './pages/Layout.jsx';
+import SignInForm from './pages/SignInForm.jsx';
 
 function App() {
   
   return (
-    <div className='app-layout'>
-      <Sidebar/>
-      <div className='header-content'>
-        <Header/>
-        <div className='main-section'>
-
-          <div className='note-list'>
-            <NoteList/>
-          </div>
-          <div className='note-details'>
-            
-          </div>
-          <div className='note-actions'>
-              <NoteButtons/>
-          </div>
-
-        </div>
-        </div>
-      </div>
-
-    
+    <Routes>
+      <Route path="layout" element={<Layout />}/>
+      <Route path="register" element={<SignUpForm />}/>
+      <Route path="/" element={<SignInForm />}/>
+    </Routes>
   );
 }
 
