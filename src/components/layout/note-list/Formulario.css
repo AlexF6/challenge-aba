@@ -21,13 +21,14 @@
   margin: 40px auto;
   background: #ffffff;
   border-radius: 12px;
+  border: #ccc 1px solid;
   box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
   padding: 32px;
   font-family: system-ui, sans-serif;
   position: absolute;
   width: 25rem;
-  left: 100%;
-  top: -80%;
+  left: 45rem;
+  top: 3.6rem;
 }
 
 .form-section {
