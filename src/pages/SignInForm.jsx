@@ -16,6 +16,7 @@ export default function SignInForm() {
         { email, password },
         {
           onSuccess() {
+            localStorage.setItem("user", JSON.stringify({ email }));
             navigate("/layout");
           },
           onError(ctx) {

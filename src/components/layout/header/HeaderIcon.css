@@ -6,3 +6,51 @@
     opacity: 50%;
     /* border: 1px solid red; */
 }
+
+
+
+.dropdown-menu {
+  position: absolute;
+  right: 0;
+  top: 50px;
+  width: 220px; /* más ancho */
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15); /* sombra más suave */
+  padding: 15px;
+  z-index: 100;
+  animation: fadeIn 0.2s ease-in-out;
+}
+
+.user-info {
+  margin: 0 0 12px;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #333;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.user-info::before {
+  content: "👤";
+  font-size: 1.2rem;
+}
+
+.logout-btn {
+  width: 100%;
+  background-color: #e74c3c;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 8px 12px;
+  cursor: pointer;
+  font-size: 0.95rem;
+  font-weight: 500;
+  transition: background-color 0.2s ease;
+}
+
+.logout-btn:hover {
+  background-color: #c0392b;
+}
