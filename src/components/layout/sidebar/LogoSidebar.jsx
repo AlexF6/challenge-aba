@@ -1,5 +1,5 @@
 import React from "react";
-import PlumaImage from "../../../assets/feather2.svg";
+import PlumaImage from "../../../assets/logopluma.png";
 import "./LogoSidebar.css";
 
 const LogoSidebar = ({ name }) => {

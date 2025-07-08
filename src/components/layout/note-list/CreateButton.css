@@ -4,7 +4,7 @@
 }
 
 .create-button {
-  background-color: #3b5df6;
+  background-color: #503494;
   color: white;
   padding: 0.8rem 4rem;
   width: 300px;
@@ -16,5 +16,5 @@
 }
 
 .create-button:hover {
-  background-color: #3a53c4;
+  background-color: #48076d;
 }

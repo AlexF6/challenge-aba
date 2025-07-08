@@ -1,88 +1,25 @@
-/*.sign-up-container {
+
+ .sign-up-bg {
   display: flex;
-  flex-direction: column;
+  padding: 300px;
+  width: 100%;
+  height: 100vh; 
   align-items: center;
   justify-content: center;
-  height: 100vh;
-}
-
-.sign-up-container form {
-  display: flex;
-  flex-direction: column;
-  width: 300px;
-  gap: 10px;
-}
-
-.sign-up-container input {
-  margin-bottom: 10px;
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-}
-
-.sign-up-container button {
-  padding: 10px;
-  background-color: #007bff;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-.sign-up-container button:hover {
-  background-color: #0056b3;
-}
-
-.sign-up-container .error {
-  color: red;
-  margin-top: 10px;
-}
-
-.sign-up-container .success {
-  color: green;
-  margin-top: 10px;
-}
-
-.sign-up-container .loading {
-  color: #007bff;
-  margin-top: 10px;
-}
-
-.sign-up-container .loading::before {
-  content: "Loading...";
-  animation: loadingAnimation 1s infinite;
-}
-
-@keyframes loadingAnimation {
-  0% {
-    opacity: 1;
-  }
-  50% {
-    opacity: 0.5;
-  }
-  100% {
-    opacity: 1;
-  }
-}*/
-
-body {
-  background: linear-gradient(135deg, white(74, 82, 192)); 
-  margin: 0;
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-family: Arial, sans-serif;
+  background: url("https://static.vecteezy.com/system/resources/previews/047/758/630/non_2x/laptop-home-office-desk-2d-cartoon-background-workspace-late-night-colorful-aesthetic-illustration-nobody-cubicle-corporate-job-workstation-table-sticky-notes-flat-wallpaper-art-lofi-image-vector.jpg") no-repeat center center;
+  background-size: cover; 
+  position: relative;
 }
 
 
-.sign-up-container {
-  background: rgb(47, 69, 199);
-  padding: 40px;
-  width: 350px;
-  text-align: center;
-  border-radius: 15px;
+.sign-up-bg::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 1;
 }
+
 
 
 .sign-up-container h2 {
@@ -92,35 +29,38 @@ body {
   letter-spacing: 1px;
 }
 
-.sign-up-container input {
+.sign-up-email input,
+.sign-up-password input {
   width: 100%;
   padding: 12px 40px;
   border: none;
-  border-radius: 30px; 
+  border-radius: 30px;
   margin-bottom: 15px;
-  background-color: rgba(255, 255, 255, 0.2); 
+  background-color: rgba(255, 255, 255, 0.2);
   color: #dadae9;
   font-size: 16px;
   position: relative;
 }
 
+.sign-up-container input::placeholder {
+  color: #cccccc;
+}
 
-.sign-up-container button {
-  width: 100%;
+.sign-up-button button {
+  width: 97px;
   padding: 12px;
   border: none;
-  border-radius: 30px; 
-  background-color: #ffffff; 
-  color: #003333; 
+  border-radius: 30px;
+  background-color: #ffffff;
+  color: #003333;
   font-size: 18px;
   font-weight: bold;
   cursor: pointer;
 }
 
-.sign-up-container button:hover {
+.sign-up-button button:hover {
   background-color: #e0e0e0;
 }
-
 
 .sign-up-link {
   display: block;
@@ -129,7 +69,23 @@ body {
   text-decoration: underline;
 }
 
-
-.sign-up-container input::placeholder {
-  color: #cccccc;
+.sign-up-container {
+  background: rgba(0, 16, 109, 0.8); 
+  backdrop-filter: blur(8px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  padding: 50px;
+  width: 350px;
+  text-align: center;
+  border-radius: 15px;
+  
 }
+.sign-up-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 2; 
+}
+
+
+

@@ -11,11 +11,15 @@
     align-items: center;
     font-size: 2.3rem;
     font-family: 'Pacifico', cursive;
+    
 }
 
 .logo-image {
     max-width: 100%;
     height: auto;
-    width: 2.5rem;
+    width: 3rem;
     min-width: 1.5rem;
+    filter: invert(21%) sepia(44%) saturate(1155%) hue-rotate(244deg) brightness(88%) contrast(96%);
+    margin-top: -10px;;
+    
 }

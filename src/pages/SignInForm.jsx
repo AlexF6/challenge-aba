@@ -31,22 +31,33 @@ export default function SignInForm() {
   };
 
   return (
+    
+  <div className="sign-in-bg">
     <div className="sign-in-container">
       <form onSubmit={handleSubmit}>
-        <input
-          placeholder="Email"
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-        />
-        <input
-          placeholder="Password"
-          type="password"
-          value={password}
-          onChange={(e) => setPassword(e.target.value)}
-        />
-        <button type="submit">Sign In</button>
-        <Link to="/register" className="sign-up-link">Sign Up</Link>
+        <div className="sign-in-email">
+          <input
+            placeholder="Email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+          />
+        </div>
+        <div className="sign-in-password">
+          <input
+            placeholder="Password"
+            type="password"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+          />
+        </div>
+        <div className="sign-in-button">
+          <button type="submit">Sign In</button>
+        </div>
+        <div className="sign-in-link">
+          <Link to="/register">Sign Up</Link>
+        </div>
       </form>
     </div>
+  </div>
   );
 }

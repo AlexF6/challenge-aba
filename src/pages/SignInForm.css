@@ -1,101 +1,24 @@
-/*.sign-in-container {
+ .sign-in-bg {
   display: flex;
-  flex-direction: column;
+  padding: 300px;
+  width: 100%;
+  height: 100vh; 
   align-items: center;
   justify-content: center;
-  height: 100vh;
-}
 
-.sign-in-container form {
-  display: flex;
-  flex-direction: column;
-  width: 300px;
-  gap: 10px;
-}
-
-.sign-in-container input {
-  margin-bottom: 10px;
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-}
-
-.sign-in-container button {
-  padding: 10px;
-  background-color: #007bff;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-.sign-in-container button:hover {
-  background-color: #0056b3;
-}
-
-.sign-in-container .error {
-  color: red;
-  margin-top: 10px;
-}
-
-.sign-in-container .success {
-  color: green;
-  margin-top: 10px;
-}
-
-.sign-in-container .loading {
-  color: #007bff;
-  margin-top: 10px;
-}
-
-.sign-in-container .loading::before {
-  content: "Loading...";
-  animation: loadingAnimation 1s infinite;
-}
-
-@keyframes loadingAnimation {
-  0% {
-    opacity: 1;
-  }
-  50% {
-    opacity: 0.5;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
-.sign-up-link {
-  color: #007bff;
-  text-decoration: none;
-  margin-top: 10px;
-}
-
-.sign-up-link:hover {
-  text-decoration: underline;
-}*/
-
-
-
-body {
-  background: linear-gradient(135deg, white(74, 82, 192)); 
-  margin: 0;
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-family: Arial, sans-serif;
+  background: url("https://static.vecteezy.com/system/resources/previews/047/758/630/non_2x/laptop-home-office-desk-2d-cartoon-background-workspace-late-night-colorful-aesthetic-illustration-nobody-cubicle-corporate-job-workstation-table-sticky-notes-flat-wallpaper-art-lofi-image-vector.jpg") no-repeat center center;
+background-size: cover; 
+  position: relative;
 }
 
 
-.sign-in-container {
-  background: rgb(47, 69, 199);
-  padding: 40px;
-  width: 350px;
-  text-align: center;
-  border-radius: 15px;
+.sign-in-bg::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0, 0, 0, 0.4); 
+  z-index: 1;
 }
-
 
 .sign-in-container h2 {
   color: #ffffff;
@@ -103,36 +26,38 @@ body {
   font-size: 24px;
   letter-spacing: 1px;
 }
-
-.sign-in-container input {
+.sign-in-email input,
+.sign-in-password input {
   width: 100%;
   padding: 12px 40px;
   border: none;
-  border-radius: 30px; 
+  border-radius: 30px;
   margin-bottom: 15px;
-  background-color: rgba(255, 255, 255, 0.2); 
+  background-color: rgba(255, 255, 255, 0.2);
   color: #dadae9;
   font-size: 16px;
   position: relative;
 }
 
+.sign-in-container input::placeholder {
+  color: #cccccc;
+}
 
-.sign-in-container button {
-  width: 100%;
+.sign-in-button button {
+  width: 97px;
   padding: 12px;
   border: none;
-  border-radius: 30px; 
-  background-color: #ffffff; 
-  color: #003333; 
+  border-radius: 30px;
+  background-color: #ffffff;
+  color: #003333;
   font-size: 18px;
   font-weight: bold;
   cursor: pointer;
 }
 
-.sign-in-container button:hover {
+.sign-in-button button:hover {
   background-color: #e0e0e0;
 }
-
 
 .sign-in-link {
   display: block;
@@ -141,7 +66,23 @@ body {
   text-decoration: underline;
 }
 
-
-.sign-in-container input::placeholder {
-  color: #cccccc;
+.sign-in-container {
+  background: rgba(0, 14, 90, 0.8); 
+  backdrop-filter: blur(8px); 
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); 
+  border-radius: 15px;
+  padding: 50px;
+  width: 350px;
+  text-align: center;
 }
+.sign-in-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 2; 
+}
+
+
+
+
