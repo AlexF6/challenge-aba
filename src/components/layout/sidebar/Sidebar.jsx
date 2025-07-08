@@ -1,27 +1,39 @@
-import React from "react";
-import { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./Sidebar.css";
-import { House } from "lucide-react";
-import { Archive } from "lucide-react";
+import { House, Archive } from "lucide-react";
 import TagItem from "./TagItem";
 import ArrowImage from "../../../assets/arrow.svg";
 import LogoSidebar from "./LogoSidebar";
 import Menu from "./Menu";
 
 const Sidebar = () => {
+  const [selectedMenu, setSelectedMenu] = useState("All Notes");
+  const [tags, setTags] = useState([]);
 
-  const [selectedMenu, setSelectedMenu] = useState("All Notes")
+  useEffect(() => {
+    async function fetchTags() {
+      try {
+        const res = await fetch("/api/tags/all", {
+          credentials: "include",
+        });
 
-  const tags = [
-    "Cooking", "Dev", "Fitness", "Health", "Personal",
-    "React", "Recipes", "Shopping", "Travel", "TypeScript"
-  ];
+        if (!res.ok) throw new Error("Failed to fetch tags");
+        const data = await res.json();
+        setTags(data);
+      } catch (err) {
+        console.error("Error fetching tags:", err);
+      }
+    }
+
+    fetchTags();
+  }, []);
 
   return (
     <aside className="sidebar">
       <div className="logo-sidebar-container">
         <LogoSidebar name="Notes" />
       </div>
+
       <div className="sidebar-menu-container">
         <nav className="menu">
           <Menu 
@@ -29,7 +41,7 @@ const Sidebar = () => {
             image2={ArrowImage} 
             name="All Notes" 
             selected={selectedMenu === "All Notes"}
-            onClick = {() => setSelectedMenu("All Notes")}
+            onClick={() => setSelectedMenu("All Notes")}
           />
           <Menu 
             icon={<Archive />} 
@@ -40,13 +52,15 @@ const Sidebar = () => {
           />
         </nav>
       </div>
-      <div className="sidebar-tags-container">
-          <h3>Tags</h3>
-          <ul>
-            {tags.map(tag => <TagItem key={tag} name={tag} />)}
-          </ul>
-      </div>
 
+      <div className="sidebar-tags-container">
+        <h3>Tags</h3>
+        <ul>
+          {tags.map(tag => (
+            <TagItem key={tag.id || tag.name} name={tag.name} />
+          ))}
+        </ul>
+      </div>
     </aside>
   );
 };

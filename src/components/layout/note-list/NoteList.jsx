@@ -1,19 +1,47 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import Note from './Note';
 import CreateButton from './CreateButton';
 import './NoteList.css';
 
 const NoteList = () => {
-    return (
-        <div className='note-list-container'>
-            <CreateButton/>
-            <Note content="React Performance Optimization" tag1="Dev" tag2="Travel" date="24 Junio 2025"/>
-            <Note content="Segunda nota de prueba" tag1="Dev" tag2="Travel" date="24 Junio 2025"/>
-            <Note content="Tercera nota de prueba" tag1="Dev" tag2="Travel" date="24 Junio 2025"/>
-            <Note content="Cuarta nota de prueba" tag1="Dev" tag2="Travel" date="24 Junio 2025"/>
-            <Note content="Quinta nota de prueba" tag1="Dev" tag2="Travel" date="24 Junio 2025"/>
-        </div>
-    );
-}
+  const [notes, setNotes] = useState([]);
+
+  useEffect(() => {
+    async function fetchNotes() {
+      try {
+        const res = await fetch('/api/notes/all', {
+          credentials: 'include',
+        });
+
+        if (!res.ok) throw new Error('Failed to fetch notes');
+        const data = await res.json();
+
+        setNotes(data);
+      } catch (err) {
+        console.error('Failed to fetch notes:', err);
+      }
+    }
+
+    fetchNotes();
+  }, []);
+
+  return (
+    <div className="note-list-container">
+      <CreateButton />
+      {notes.map((note) => (
+        <Note
+          key={note.id}
+          content={note.title}
+          tags={note.tags ?? []}
+          date={new Date(note.created_at).toLocaleDateString('es-CO', {
+            day: '2-digit',
+            month: 'long',
+            year: 'numeric',
+          })}
+        />
+      ))}
+    </div>
+  );
+};
 
 export default NoteList;

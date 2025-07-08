@@ -1,20 +1,33 @@
-import { signUp } from "../lib/auth-client";
+import { authClient } from "../lib/auth-client";
 import { useState } from "react";
 import "./SignUpForm.css";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 export default function SignUpForm() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [message, setMessage] = useState("");
+  const navigate = useNavigate();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    await signUp.email({
-      email,
-      password,
-      name: "Test",
-      image: "",
-    });
+
+    try {
+      await authClient.signUp.email(
+        { email, password, name: "Test", image: "" },
+        {
+          onSuccess() {
+            navigate("/layout");
+          },
+          onError(ctx) {
+            setMessage("Register failed: " + ctx.error.message);
+          },
+        }
+      );
+    } catch (err) {
+      console.error("Unexpected error", err);
+      setMessage("Unexpected error occurred");
+    }
   };
 
   return (
@@ -32,6 +45,7 @@ export default function SignUpForm() {
           </div>
           <div className="sign-up-link">
             <Link to="/">Sign In</Link>
+            {message && <div className="form-message">{message}</div>}
           </div>
         </form>
       </div>

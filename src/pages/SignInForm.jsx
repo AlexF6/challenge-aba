@@ -1,4 +1,4 @@
-import { signIn } from "../lib/auth-client";
+import { authClient } from "../lib/auth-client";
 import { useState } from "react";
 import { useNavigate, Link } from "react-router-dom";
 import "./SignInForm.css";
@@ -12,7 +12,7 @@ export default function SignInForm() {
     e.preventDefault();
 
     try {
-      await signIn.email(
+      await authClient.signIn.email(
         { email, password },
         {
           onSuccess() {
