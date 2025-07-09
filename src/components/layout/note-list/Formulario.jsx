@@ -4,10 +4,9 @@ import "./Formulario.css";
 function Formulario({ onCancel }) {
   const [titulo, setTitulo] = useState('');
   const [contenido, setContenido] = useState('');
-  const [categoria, setCategoria] = useState(null);
   const [tags, setTags] = useState([]);
+  const [selectedTags, setSelectedTags] = useState([]);
 
-  // Fetch tags from backend on mount
   useEffect(() => {
     async function fetchTags() {
       try {
@@ -16,7 +15,7 @@ function Formulario({ onCancel }) {
         });
         if (!res.ok) throw new Error("Failed to fetch tags");
         const data = await res.json();
-        setTags(data); // assuming array of { id, name }
+        setTags(data);
       } catch (err) {
         console.error("Error fetching tags:", err);
       }
@@ -31,10 +30,19 @@ function Formulario({ onCancel }) {
     year: 'numeric'
   });
 
+  const handleTagToggle = (tagName) => {
+    setSelectedTags((prev) =>
+      prev.includes(tagName)
+        ? prev.filter((t) => t !== tagName)
+        : [...prev, tagName]
+    );
+  };
+
   const handleSubmit = async (e) => {
     e.preventDefault();
 
     try {
+      // Step 1: Create the note
       const res = await fetch("/api/notes", {
         method: "POST",
         headers: {
@@ -44,7 +52,6 @@ function Formulario({ onCancel }) {
         body: JSON.stringify({
           title: titulo,
           content: contenido,
-          category: categoria, // send selected tag name or ID
         }),
       });
 
@@ -53,11 +60,33 @@ function Formulario({ onCancel }) {
         throw new Error(error.message || "Failed to save note");
       }
 
-      alert("Nota guardada con éxito");
+      const newNoteArray = await res.json();
+      const newNote = newNoteArray[0];
 
+      for (const tag of selectedTags) {
+        const tagRes = await fetch("/api/tags", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          credentials: "include",
+          body: JSON.stringify({
+            note_id: newNote.id,
+            tag,
+          }),
+        });
+
+        if (!tagRes.ok) {
+          const tagErr = await tagRes.json();
+          throw new Error(tagErr.message || `Failed to assign tag "${tag}"`);
+        }
+      }
+
+      alert("Nota guardada con éxito");
       setTitulo('');
       setContenido('');
-      setCategoria(null);
+      setSelectedTags([]);
+
     } catch (err) {
       console.error("Error al guardar la nota:", err);
       alert("Error al guardar la nota: " + err.message);
@@ -78,13 +107,13 @@ function Formulario({ onCancel }) {
       </div>
 
       <div className="form-section">
-        <label className="form-label"><strong>Etiqueta</strong></label>
+        <label className="form-label"><strong>Etiquetas</strong></label>
         <div className="form-tags">
           {tags.map((tag) => (
             <span
               key={tag.id}
-              className={`form-tag ${categoria === tag.name ? 'selected' : ''}`}
-              onClick={() => setCategoria(tag.name)}
+              className={`form-tag ${selectedTags.includes(tag.name) ? 'selected' : ''}`}
+              onClick={() => handleTagToggle(tag.name)}
             >
               {tag.name}
             </span>
