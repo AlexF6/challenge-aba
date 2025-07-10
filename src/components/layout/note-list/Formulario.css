@@ -111,3 +111,14 @@
 .form-cancel:hover {
   background-color: #d1d5db;
 }
+
+.form-tags-input button {
+  padding: 8px 12px;
+  background-color: #582969;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+  margin-top: 8px;
+  border-radius: 8px;
+}
