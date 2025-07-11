@@ -4,6 +4,7 @@ import NoteButtons from '../components/layout/note-actions/NoteButtons.jsx';
 import NoteList from '../components/layout/note-list/NoteList.jsx';
 import SignInForm from "../pages/SignInForm";
 import { useEffect, useState } from "react";
+import Details from "../components/layout/note-details/Details.jsx";
 
 export default function Layout() {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
@@ -30,6 +31,7 @@ export default function Layout() {
             />
           </div>
           <div className='note-details'>
+            <Details noteId={selectedNoteId} />
           </div>
           <div className='note-actions'>
             {<NoteButtons noteId={selectedNoteId} />}
