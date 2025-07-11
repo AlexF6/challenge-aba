@@ -6,7 +6,7 @@ const Menu = ({ name, icon, image2, selected, onClick }) => {
     <div className={`menu-item ${selected ? 'selected' : ''}`}onClick={onClick}>
       <div>
         {icon && <span className="menu-icon">{icon}</span>}
-        <a href="#">{name}</a>
+        <a href="/">{name}</a>
       </div>
           {selected && <img src={image2} className="menu-icon2"/>}
     </div>

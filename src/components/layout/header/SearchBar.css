@@ -16,12 +16,11 @@
 .search-input {
   width: 20rem;
   padding: 0.9rem;
+  padding-left: 2.5rem;
   border-radius: 8px;
   border: 1px solid #ccc;
   font-family: "Roboto", sans-serif;
   font-size: medium;
 }
 
-.go-right {
-  padding-left: 3rem;
-}
+

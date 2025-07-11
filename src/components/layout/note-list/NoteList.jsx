@@ -3,9 +3,8 @@ import Note from './Note';
 import CreateButton from './CreateButton';
 import './NoteList.css';
 
-const NoteList = ({ selectedNoteId, setSelectedNoteId }) => { // Props are correctly destructured here
+const NoteList = ({ selectedNoteId, setSelectedNoteId }) => {
   const [notes, setNotes] = useState([]);
-  // REMOVE THIS LINE: const [selectedNoteId, setSelectedNoteId] = useState(null);
 
   useEffect(() => {
     async function fetchNotes() {
