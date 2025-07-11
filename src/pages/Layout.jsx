@@ -7,14 +7,16 @@ import { useEffect, useState } from "react";
 
 export default function Layout() {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
+  const [selectedNoteId, setSelectedNoteId] = useState(null);
+
 
   useEffect(() => {
     const user = JSON.parse(localStorage.getItem("user"));
     if (user?.email) {
-      setIsAuthenticated(true); // si hay usuario registrado
+      setIsAuthenticated(true);
     }
   }, []);
-  
+
   return (
     <div className='app-layout'>
       <Sidebar />
@@ -22,12 +24,15 @@ export default function Layout() {
         <Header />
         <div className='main-section'>
           <div className='note-list'>
-            <NoteList />
+            <NoteList
+              selectedNoteId={selectedNoteId}
+              setSelectedNoteId={setSelectedNoteId}
+            />
           </div>
           <div className='note-details'>
           </div>
           <div className='note-actions'>
-            <NoteButtons />
+            {<NoteButtons noteId={selectedNoteId} />}
           </div>
         </div>
       </div>

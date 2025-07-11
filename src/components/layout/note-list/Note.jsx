@@ -1,15 +1,18 @@
 import './Note.css';
 
-const Note = ({ content, tags, date }) => {
+const Note = ({ content, tags, date, onClick, isSelected }) => {
   return (
-    <div className="note-container">
+    <div
+      className={`note-container ${isSelected ? 'selected' : ''}`}
+      onClick={onClick}
+    >
       <p className="note-title">{content}</p>
       <div className="tag-container">
         {tags.map((tag) => (
-        <p key={tag}>{tag}</p>
+          <p key={tag}>{tag}</p>
         ))}
       </div>
-      <p className="date">{date}</p>
+      <p className="note-date">{date}</p>
     </div>
   );
 };

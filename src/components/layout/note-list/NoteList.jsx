@@ -3,8 +3,9 @@ import Note from './Note';
 import CreateButton from './CreateButton';
 import './NoteList.css';
 
-const NoteList = () => {
+const NoteList = ({ selectedNoteId, setSelectedNoteId }) => { // Props are correctly destructured here
   const [notes, setNotes] = useState([]);
+  // REMOVE THIS LINE: const [selectedNoteId, setSelectedNoteId] = useState(null);
 
   useEffect(() => {
     async function fetchNotes() {
@@ -25,6 +26,11 @@ const NoteList = () => {
     fetchNotes();
   }, []);
 
+  const handleNoteClick = (id) => {
+    setSelectedNoteId(id);
+    console.log('Selected Note ID:', id);
+  };
+
   return (
     <div className="note-list-container">
       <CreateButton />
@@ -38,6 +44,8 @@ const NoteList = () => {
             month: 'long',
             year: 'numeric',
           })}
+          onClick={() => handleNoteClick(note.id)}
+          isSelected={note.id === selectedNoteId}
         />
       ))}
     </div>
