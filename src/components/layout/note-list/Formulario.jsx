@@ -87,27 +87,27 @@ function Formulario({ onCancel }) {
   return (
     <form className="formulario" onSubmit={handleSubmit}>
       <div className="form-section">
-        <label className="form-label"><strong>Título</strong></label>
+        <label className="form-label"><strong>Title</strong></label>
         <input
           className="input-form"
           type="text"
           value={titulo}
           onChange={(e) => setTitulo(e.target.value)}
-          placeholder="Título de la nota"
+          placeholder="write the title"
         />
       </div>
 
       <div className="form-section">
-        <label className="form-label"><strong>Etiquetas</strong></label>
+        <label className="form-label"><strong>Tags</strong></label>
         <div className="form-tags-input">
           <input
             className="input-form"
             type="text"
             value={newTag}
             onChange={(e) => setNewTag(e.target.value)}
-            placeholder="Escribe una etiqueta"
+            placeholder="write a tag and add it"
           />
-          <button type="button" onClick={handleAddTag}>Agregar</button>
+          <button type="button" onClick={handleAddTag}>Add</button>
         </div>
 
         <div className="form-tags" style={{ marginTop: 8 }}>
@@ -130,15 +130,15 @@ function Formulario({ onCancel }) {
           className="form-textarea"
           value={contenido}
           onChange={(e) => setContenido(e.target.value)}
-          placeholder="Contenido de la nota..."
+          placeholder="Start typing..."
         />
       </div>
 
       <div className="form-footer">
         <button type="submit" className="form-save" disabled={loading}>
-          {loading ? "Guardando..." : "Guardar nota"}
+          {loading ? "Guardando..." : "Save Note"}
         </button>
-        <button type="button" className="form-cancel" onClick={onCancel}>Cancelar</button>
+        <button type="button" className="form-cancel" onClick={onCancel}>Cancel</button>
       </div>
     </form>
   );

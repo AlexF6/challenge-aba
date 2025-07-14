@@ -29,7 +29,7 @@ const Details = ({ noteId }) => {
   }, [noteId]);
 
   if (!note) {
-    return <div className="note-details-container">Select a note to see details.</div>;
+    return <div className="note-details-container"></div>;
   }
 
   return (
