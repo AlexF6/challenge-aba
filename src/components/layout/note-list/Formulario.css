@@ -17,6 +17,8 @@
 }*/
 
 .formulario {
+  position: absolute;
+   transform: translate(-28%, 2%);
   max-width: 700px;
   margin: 40px auto;
   background: #F5F2F7;
